@@ -36,17 +36,17 @@ Anthropic, OpenAI, OpenClaw, OpenCode, DeepSeek Harness, and other systems are *
 
 Start with the [research framework](docs/RESEARCH_FRAMEWORK.md), [methodology](docs/METHODOLOGY.md), [metrics](docs/METRICS.md), and [roadmap](docs/ROADMAP.md).
 
-## Evidence and frontier monitoring
+## Publication research and frontier monitoring
 
-Articles, product announcements, source repositories, and experiments feed the domain research. They never substitute for it.
-
-- [Company and project observations](observations/README.md)
-- [Anthropic: engineering and research signals, Sep 18–Oct 18, 2026](observations/anthropic/2026-09-18_to_2026-10-18.md)
-- [OpenAI: engineering and product signals, Sep 18–Oct 18, 2026](observations/openai/2026-09-18_to_2026-10-18.md)
+- **[Latest monthly review: Anthropic and OpenAI (Sep 18–Oct 18, 2026)](observations/2026-09-18_to_2026-10-18.md)**
+- [Anthropic original-linked article notes and technical interpretation](observations/anthropic/2026-09-18_to_2026-10-18.md)
+- [OpenAI original-linked article notes and technical interpretation](observations/openai/2026-09-18_to_2026-10-18.md)
 - [Primary source registry](docs/SOURCE_REGISTRY.md)
 - [Open-source project catalog](projects/README.md)
 - [Reproducible experiments](experiments/README.md)
-- [Historical article reviews](studies/2026-10/agentic-delivery-bottlenecks.md)
+- [Earlier article case studies](studies/2026-10/agentic-delivery-bottlenecks.md)
+
+**The research unit is the engineering concept**, not the company, model or blog post. Dated publication reviews are supporting evidence, not the repository taxonomy.
 
 ## Working principles
 
@@ -59,4 +59,4 @@ Articles, product announcements, source repositories, and experiments feed the d
 
 Use [AGENTS.md](AGENTS.md) for contributor instructions. Research updates go through an Issue, evidence-based changes, a reviewable PR, and CI.
 
-_Research baseline: 2026-10-18. The latest-month digests are a scoped snapshot of relevant published materials, not a claim to exhaustively index every company announcement._
+_Research baseline: 2026-10-18. Monthly digests are curated, scoped snapshots of first-party publications, not an exhaustive index of every corporate announcement._

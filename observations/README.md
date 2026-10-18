@@ -1,22 +1,29 @@
-# Implementation and Publication Observations
+# Publication Evidence and Implementation Observations
 
 **Evidence follows infrastructure concepts; it does not define them.**
 
-Use [domain briefs](../domains/README.md) to select the problem first. Then follow source observations to see how specific organizations and projects report addressing it.
+Begin with the [infrastructure domain map](../domains/README.md). Use dated publications and code as observations of how organizations and projects approach those problems.
 
-## Recent publication snapshots
+## Monthly research: 2026-09-18 → 2026-10-18
 
-- [Anthropic: Sep 18 – Oct 18, 2026](anthropic/2026-09-18_to_2026-10-18.md)
-- [OpenAI: Sep 18 – Oct 18, 2026](openai/2026-09-18_to_2026-10-18.md)
+- **[Cross-company technical synthesis, original links and measurable bottlenecks](2026-09-18_to_2026-10-18.md)**
+- [Anthropic: article inventory, technical mechanisms, gaps and priorities](anthropic/2026-09-18_to_2026-10-18.md)
+- [OpenAI: article inventory, technical mechanisms, gaps and priorities](openai/2026-09-18_to_2026-10-18.md)
 
-## Scope policy
+## How to use these snapshots
 
-A one-month publication review reports what has been **publicly published in the window**, with a narrower subset relevant to engineering infrastructure. It is *not* a claim about every internal workstream, nor proof that articles accurately describe all deployments.
+1. Start with a technical constraint or invariant.
+2. Find original articles in the cross-company concept matrix.
+3. Follow the company report to see **what its authors actually disclosed**.
+4. Inspect the problem's domain brief; compare alternative architectures.
+5. Open a research Issue to verify undocumented behavior against pinned code or controlled experiment.
 
-Every entry records publication date, source classification (Engineering / Research / product / case study), a link, implicated infrastructure concepts, and the boundary between reported evidence and our analysis.
+### Evidence classification
 
-Distinguish:
-- **Direct engineering account**: implementation or incident described by engineers.
-- **Research/evaluation**: scientific or safety evidence relevant to system design.
-- **Product announcement**: availability and features, usually not implementation-level proof.
-- **Customer case study**: customer-reported results; not an independently controlled benchmark.
+- **Engineering disclosure:** a first-party account of implementation or measurements.
+- **Scientific research:** a bounded experimental claim; not necessarily a deployed platform feature.
+- **Product announcement:** feature availability, without full internal implementation.
+- **Individual build/case study:** illustrative techniques, not a general reliability benchmark.
+- **Research synthesis:** explicitly identified inference from multiple sources.
+
+Each snapshot must document date window, scope exclusions, original links, publication dates, claimed mechanisms, engineering consequences, and unknowns. A "one-month review" is not an assertion about the total set of internal projects or all corporate news.
