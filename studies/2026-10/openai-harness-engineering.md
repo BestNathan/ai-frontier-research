@@ -1,26 +1,26 @@
-# OpenAI Harness Engineering — 让环境对 Agent 可读、可验证
+# Case Note: OpenAI Harness Engineering
 
-- **研究时间**：2026-10-18
-- **状态**：一手文章解读；未独立复验
-- **来源**：https://openai.com/index/harness-engineering/ （2026-02-11）
+- **Observed:** 2026-10-18
+- **Source:** https://openai.com/index/harness-engineering/ (2026-02-11)
+- **Primary concept:** [Verification](../../domains/verification.md)
+- **Type:** vendor engineering disclosure
 
-## Verified：官方披露
+## Engineering problem
 
-OpenAI 在一个内部实验项目里让 Codex 生成应用、测试、CI、文档、观测和发布工具，工程师负责目标、架构约束和验收。文章报告五个月约 1,500 个合并 PR、百万行量级代码，属于该团队的经验数据。
+How can an agent produce validated, maintainable changes without relying on a human to constantly reproduce bugs, inspect the UI and run tests?
 
-主要手段：
+## Verified (as reported by OpenAI)
 
-- 用 Linter 与可执行架构不变量代替仅写在文档里的约定。
-- 将应用启动、浏览器操作、视频/截图证据、E2E、Review 评论和 CI 故障修复纳入 Agent 工作。
-- 强调短生命周期 PR、持续的自动化反馈和修复；在该特定环境里减少了部分阻塞式 Merge Gate。
-- 让系统可观测、可探索、可被 Agent 修改；工程人员主要建立反馈和控制系统。
+OpenAI described a codebase developed through Codex-generated application code, tests, CI, tooling and documentation, reporting approximately 1,500 merged PRs over five months. The project made per-worktree application instances, browser interaction, ephemeral observability stacks and architectural lint rules available to agents. Engineers shifted toward specifying requirements, executable constraints and feedback loops.
 
 ## Inferred
 
-高质量 Harness 的真正职责不仅是增强模型能力，而是让错误**可见、可定位、可验证、可修复**。端到端正确交付可以随着环境质量提升而改善，即使模型本身不变。
+An agent's reliability depends heavily on whether requirements and runtime evidence are discoverable and machine-checkable. Architectural guardrails act as compressed repeatable human judgement.
 
-## 风险与实验
+## Unknown / limitations
 
-少量阻塞门禁依赖强测试、强观测和可快速纠错，不能直接套用于密钥、权限、付款、数据迁移等高风险工作。
+Results from one internal application do not justify removing blocking CI in high-risk production systems. The article does not demonstrate that all post-merge semantics are universally safe without human review.
 
-对照实验：相同真实 Issue、相同模型预算，比对普通仓库和具备架构约束/E2E/反馈的仓库，比较交付正确率、P95 Lead Time、回归率与人工介入分钟数。
+## Proposed test
+
+Use a fixed issue set and model budget to compare a normal repository with one exposing architecture checks, application E2E, logs and traces. Track accepted change rate, defect escapes, human time, and repeated repair loops.

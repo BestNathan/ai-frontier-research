@@ -1,23 +1,23 @@
 ---
-name: Experiment
-about: 固定版本、基线和验证条件的工程实验
+name: Reproducible Experiment
+about: Falsifiable infrastructure hypothesis with a fixed workload
 title: "[Experiment] "
 labels: []
 assignees: []
 ---
 
-## Falsifiable Hypothesis
+## Concept and hypothesis
 
-## Baseline / Treatment
+## Baseline, treatment and invariants
 
-## SHA, Workload, Environment, Budget
+## Code SHA, workload, environment and budget
 
-## Success Criteria
+## Success criteria
 
-- [ ] 输入与依赖固定且可复现
-- [ ] 指标含 P50/P95、失败和成本（适用时）
-- [ ] 记录原始证据与复验命令
-- [ ] 分析偏差、反例和有效性威胁
-- [ ] 结论链接对应研究笔记
+- [ ] Repeatable scripts and immutable source versions.
+- [ ] P50/P95, failure rate, correctness and total cost where applicable.
+- [ ] Negative tests and counterexamples documented.
+- [ ] Raw results and validity threats preserved.
+- [ ] Findings linked back to the concept-first research.
 
-## Stop / Risk Conditions
+## Stop conditions / risk controls

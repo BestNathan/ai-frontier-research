@@ -1,43 +1,35 @@
-# Experiment: <Title>
+# Experiment: <Concept and Hypothesis>
 
-- Issue:
+- Related research:
 - Owner:
-- Date:
+- Started:
 - Status: Planned / Running / Completed / Invalidated
-- Hypothesis:
 
-## Experimental Design
+## Falsifiable Hypothesis
 
-- Baseline:
-- Treatment:
-- Controls:
-- Success/failure criteria:
-- Independent and dependent variables:
+## System and Invariants
 
-## Fixed Versions & Inputs
+## Baseline / Treatment / Controlled Variables
+
+## Inputs and Execution Environment
 
 - Repository SHA:
-- Agent / Model / Harness:
-- OS / Hardware / Runner:
-- Test data / seed:
-- Load / concurrency / repeats:
-- Cache cold/warm:
-- Resource budget / stop conditions:
+- Agent / model / tool versions:
+- Hardware / OS / runner:
+- Workload / seed / concurrency:
+- Warm/cold-cache policy:
+- Cost limit / stop conditions:
 
-## Procedure
+## Procedure and Reproduction Commands
 
-可重复操作命令、准备和清理过程。
+## Evidence and Results
 
-## Raw Evidence
+Include raw logs, artifact hashes, source links, time-series, error rates, tail latency and cost.
 
-日志、指标、原始数据、SHA256、运行 ID、Artifact URL。
+## Validity Threats and Counterexamples
 
-## Results
+## Conclusions
 
-P50/P95、可靠性、回归率、成本和误差范围。
+Do not present author-reported numbers as independently measured results.
 
-## Limitations
-
-与基线不一致的条件、隐藏成本、Flaky、偏差来源。
-
-## Conclusion and Next Experiment
+## Follow-up

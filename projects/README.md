@@ -1,14 +1,14 @@
-# Project Radar — 前沿 Agent Engineering
+# Open-Source Implementation Catalog
 
-关注开源系统真实实现、接口与演化，不按 Star 数推断工程质量。
+This is a **lookup catalog** for implementation evidence, not the repository's organizing taxonomy. Start from a [domain problem](../domains/README.md) before selecting a project.
 
-| 项目 | 核心研究维度 | 研究入口 |
+| Implementation | Questions to inspect | Profile |
 | --- | --- | --- |
-| OpenClaw | Gateway、Channel、Tools、Skills、权限与 Session | [Profile](openclaw.md) |
-| OpenCode | Build / Plan 模式、Coding Agent 与工具 | [Profile](opencode.md) |
-| DeepSeek Harness (DSH) | Cordis、Everything-is-a-plugin、协议治理 | [Profile](deepseek-harness.md) |
-| OpenAI Codex | CLI / App Server、Harness、Sandbox、工具系统 | https://github.com/openai/codex |
-| OpenAI Symphony | Issue 调度、专属 Workspace、Supervisor | https://github.com/openai/symphony |
-| GitHub MCP Server | GitHub API 工具化、授权和 Tool Server 边界 | https://github.com/github/github-mcp-server |
+| OpenClaw | Gateway, sessions, skills, tools and permission boundary | [OpenClaw](openclaw.md) |
+| OpenCode | Coding agent, plan/build behavior, session and tool semantics | [OpenCode](opencode.md) |
+| DeepSeek Harness | Cordis, plugin lifecycle and extensibility invariants | [DeepSeek Harness](deepseek-harness.md) |
+| Codex | Runtime, sandbox, tool handling, app-server | https://github.com/openai/codex |
+| Symphony | Task scheduling, issue lifecycle, workspaces | https://github.com/openai/symphony |
+| GitHub MCP Server | External tools, authorization and connector boundary | https://github.com/github/github-mcp-server |
 
-项目 Profile 仅作为调研起点，不能将 README 功能声明视为已审计的源码事实。新项目加入前，写清研究问题以及相比既有对象带来的独特证据。
+Pin commits before asserting implementation behavior; README features alone do not establish internal correctness.
