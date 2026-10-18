@@ -28,7 +28,7 @@ for doc in sorted(ROOT.rglob("*.md")):
         if not resolved.is_relative_to(ROOT) or not resolved.exists():
             errors.append(f"{doc.relative_to(ROOT)}: broken local link: {target}")
         checked += 1
-    if doc.parts[0] == "studies":
+    if doc.relative_to(ROOT).parts[0] == "studies":
         if not ("Source" in content or "source" in content):
             errors.append(f"{doc.relative_to(ROOT)}: missing source description")
         if "Verified" not in content:
