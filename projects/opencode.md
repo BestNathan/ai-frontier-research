@@ -1,26 +1,22 @@
-# OpenCode — Project Profile
+# OpenCode Implementation Observation
 
-- **官方仓库**：https://github.com/anomalyco/opencode
-- **观察日期**：2026-10-18
-- **状态**：README 初查，待固定 SHA 审计
+- **Repository:** https://github.com/anomalyco/opencode
+- **Observed:** 2026-10-18
+- **Status:** README-level observations; source-code audit pending
+- **Concepts:** [context](../domains/context-and-retrieval.md), [execution](../domains/durable-execution.md), [security](../domains/security.md)
 
-## Verified（官方 README 描述）
+## Verified (project description)
 
-OpenCode 是开源 Coding Agent，提供 Build（执行开发）与 Plan（偏只读分析）等 Agent 模式，并描述可处理多步任务的 Subagent。
+The project documents Build and Plan modes and supporting agent workflows. This observation does not establish the enforcement implementation.
 
-这些是公开功能描述，不能据此推断具体的权限继承、Session 一致性或恢复机制。
+## Research questions
 
-## 研究问题
+Are Plan/Build tool permissions enforced by a shared policy layer? How are sessions, tools and subagents persisted? What is the behavior under worktree changes or tool failures?
 
-- Session、Message、Tool Call 和 Agent 如何持久化？
-- Plan/Build 权限切换是否在 Tool 层强制约束？
-- Subagent 是否有独立上下文、预算和错误隔离？
-- 文件定位、LSP、Git、Worktree 与远程工具如何协调？
-- 长时间/跨设备运行时，如何处理恢复和授权？
+## Inferred
 
-## 下一步
+Agent mode names do not by themselves guarantee isolation or safe read-only execution.
 
-- [ ] 固定 SHA 与源码入口
-- [ ] 跟踪一次从 Prompt 到 Tool 的执行路径
-- [ ] 验证跨 Agent 的状态和权限边界
-- [ ] 与 Codex/DSH 进行同口径比较
+## Next audit
+
+Pin a release SHA and examine one plan-mode forbidden write, one tool failure and one subagent lifecycle end-to-end.

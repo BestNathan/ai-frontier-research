@@ -1,44 +1,51 @@
-# Research: <Title>
+# Research: <Concept and Engineering Question>
 
-- Research Issue:
-- Author / Reviewer:
-- Research date:
-- Last verified:
-- Upstream version / SHA:
-- Scope and status:
+- Research issue:
+- Author / reviewer:
+- Date of observation:
+- Last validated:
+- Scope and excluded cases:
+- Status:
 
-## Question & Motivation
+## Concept and System Boundary
 
-## Primary Evidence
+Define the engineering problem without naming a vendor.
 
-| Source | Author / Date | URL / fixed SHA | Confidence |
-| --- | --- | --- | --- |
+## Invariants and Failure Modes
 
-## Verified Findings
+State invariants, ownership, authority, recovery guarantees and consistency requirements.
 
-区分作者披露、真实源码和我们实际测量。
+## Candidate Architectures
 
-## Mechanism
+At least two alternatives, including what each optimizes and compromises.
 
-数据流、控制流、缓存、一致性、权限、失败恢复及规模边界。
+## Implementation Evidence
 
-## Inferred / Hypothesis / Unknown
+| System | Primary source | Publication date / pinned SHA | Claim | Classification |
+| --- | --- | --- | --- | --- |
 
-### Inferred
-### Hypothesis
-### Unknown
+## Verified
 
-## Alternatives and Trade-offs
+Clearly attribute direct source findings and vendor-reported results.
 
-## Reproducibility
+## Inferred
 
-输入、对照组、环境、版本、指标、操作步骤、实验数据位置。
+Explicit assumptions and supporting logic.
 
-## Relevance to Stable AI Production
+## Hypothesis
 
-## Next Actions and Open Questions
+A falsifiable claim with an experiment plan.
 
-## Change Log
+## Unknown
 
-| Date | New evidence | Conclusion change |
-| --- | --- | --- |
+Missing evidence and consequences.
+
+## Evaluation
+
+Fixed inputs, workload, environment, costs, safety constraints and quality metrics.
+
+## Synthesis
+
+When each approach is appropriate; decisions and caveats.
+
+## Next Actions and Change Log
