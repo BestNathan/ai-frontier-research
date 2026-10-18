@@ -1,32 +1,46 @@
-# Evidence-based Research Methodology
+# Evidence-Based Research Methodology
 
-## 证据模型
+## Epistemic categories
 
-| 状态 | 含义 |
-| --- | --- |
-| Verified | 原始资料或代码明确支持，且可追溯到 URL / SHA |
-| Inferred | 由已知机制推导；必须写清前提和反例 |
-| Hypothesis | 尚待复现实验验证；不可当作结论 |
-| Unknown | 信息不足；保留未知项而不猜测 |
+| Label | Meaning | Required attribution |
+| --- | --- | --- |
+| Verified | Supported by an identified source or direct reproducible observation | Who said/implemented it, where, and when |
+| Inferred | Derived from verified evidence and stated assumptions | Mechanism and plausible counterexample |
+| Hypothesis | Testable prediction, not yet substantiated | Experimental falsification plan |
+| Unknown | Relevant detail that available evidence cannot resolve | Missing evidence and consequence |
 
-证据等级：A=固定 SHA 代码和可复验结果；B=官方技术披露；C=独立交叉复验；D=架构推导；E=实验假设。官方性能数字是 **B 类作者报告**，不等于我们已经复现。
+**Vendor-reported** results must not be treated as independently reproduced measurements. For source-code claims, give an immutable commit SHA and relevant files/tests.
 
-## 研究步骤
+## Study workflow
 
-1. 提出可回答的具体问题和对照范围。
-2. 搜集官方技术博客、源码、设计文档、PR/Issue 等一手材料；注明发布时间、访问日期、版本。
-3. 分析数据面、控制面、一致性、资源成本、权限、失败路径和边界条件。
-4. 设计可证伪实验：固定输入集、环境、SHA、资源预算、冷/热缓存、并发规模和重复次数。
-5. 给出定量指标、P50/P95、错误率、恢复率、成本与原始证据。
-6. 输出哪些结论成立、哪些未知、适用范围、替代方案、后续 Issue。
+1. **Define the concept:** system boundary, inputs, outputs, user, attacker, and shared state.
+2. **Identify invariants:** version consistency, isolation, durability, authorization, evidence trust.
+3. **Model failures:** crashes, replay, race, stale cache, lost results, network partitions, semantic regressions.
+4. **Identify options:** at least two viable architectures and their operational costs.
+5. **Study implementations:** primary documentation and pinned code. Distinguish announcement from deployment and author performance reports.
+6. **Design experiments:** fixed code SHA, workload, environment, instrumentation, baseline, repetitions, and resource budget.
+7. **Synthesize:** limitations, threats to validity, what is transferable, and which facts would reverse the conclusion.
 
-## 评审门禁
+## Performance comparison checklist
 
-- [ ] 事实与推断分开；文章引用有来源和日期
-- [ ] 数字明确属于作者披露还是我们的实验
-- [ ] 源码观察固定 Commit SHA，链接可查
-- [ ] 对比统一硬件、任务集、预算和质量标准
-- [ ] 说明失败模式、边界、安全与反例
-- [ ] 有具体对稳定 AI 交付的意义和下一步
+- Baseline and intervention are identical except for controlled changes.
+- Report warm and cold cache separately.
+- Report P50/P95, throughput, error rate, resource cost, and the denominator.
+- Evaluate both **correctness** and **speed**; a shorter test suite may introduce false negatives.
+- Capture human intervention and recovery, not just completed PRs or model tokens.
+- Maintain raw data, environment fingerprint, and experiment artifacts.
 
-研究文档使用 [研究模板](../templates/research.md)，实验使用 [实验模板](../templates/experiment.md)。
+## Source handling
+
+Register publication date and observation date separately. A public article is evidence that its author **reports** a mechanism or result; it does not establish all unpublished internal details. Do not infer that a service deployed for an internal monorepo also runs in every public product.
+
+## Acceptance criteria
+
+- [ ] Concept and failure modes stand independently of any vendor.
+- [ ] Primary sources have dates and stable URLs.
+- [ ] Verified / Inferred / Hypothesis / Unknown are explicit.
+- [ ] Comparable alternatives, scale limits, trust boundaries, and costs are discussed.
+- [ ] Reproducibility plan or explicit limitation exists.
+- [ ] Review identifies risks of inaccurate conclusions and outdated evidence.
+
+Templates: [domain study](../templates/research.md) and [experiment](../templates/experiment.md).

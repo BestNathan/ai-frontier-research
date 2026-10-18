@@ -1,30 +1,30 @@
-# Metrics for Reliable AI Productivity
+# Metrics for Reliable Agent Productivity
 
-## 北极星
+## North-star outcome
 
-**Verified Delivery Rate** = 一定时间内完成质量门禁并集成、经过必要后置验收的需求数量 / 时间。
+**Verified Delivery Rate** = accepted requirements completed, integrated, and validated under the stated policy, divided by elapsed time.
 
-不能只用 PR 数量、生成代码行数或 Token TPS 表示生产力。
+A generated pull request, a passing unit test, or a model response is *not* itself a verified delivery.
 
-## 守护指标
+## Required guardrails
 
-| 指标 | 口径 |
+| Metric | Definition |
 | --- | --- |
-| Change Failure Rate | 已发布变更中导致回滚/事故的比例 |
-| Escape Defect Rate | 交付后被发现的真实缺陷 / 已交付需求 |
-| Human Intervention | 单个需求的人工判断、救火和协调分钟数 |
-| Cost per Verified Delivery | Token + CPU + CI + 存储等 / 成功交付需求 |
-| Recovery Success Rate | 注入故障后在约定时限成功恢复且不丢进度的比例 |
-| Lead Time | 从需求 Ready 到验证完成、可以使用的时间 |
+| Change failure rate | Releases causing an incident, rollback, or failed post-release check / total releases |
+| Escaped defect rate | Valid defects first identified after delivery / delivered requirements |
+| Human intervention | Human triage, rework, approval, and incident minutes / delivered requirement |
+| Cost per verified delivery | Attributable tokens, compute, CI, storage, and operations cost / verified delivery |
+| Recovery success | Fault injections successfully reconciled without lost state/duplicated effects / injections |
+| End-to-end lead time | Ready-to-start requirement → policy-compliant completed delivery |
 
-## 按子系统拆分
+## Infrastructure metrics
 
-- Retrieval：候选文件 Recall@K、搜索版本漂移、检索 P50/P95。
-- Runtime：重复工具副作用、Crash 后恢复时间、失败率。
-- SCM：冷/热 Checkout、IO、磁盘峰值、锁等待、合并冲突率。
-- Orchestration：任务等待、依赖阻塞、Agent 有效利用率。
-- CI：构建缓存、选测覆盖/漏检、E2E Flaky、单位变更验证成本。
-- Review/Merge：Review 等待、合并吞吐、未经发现回归数量。
-- Release：发布耗时、异常发现与回滚成功率。
+- Context: Recall@K, stale results, bytes fetched, time to correct location.
+- Runtime: checkpoint integrity, retry duplicates, durable recovery P50/P95.
+- SCM: clone/checkout P50/P95, cache hit, I/O, workspace density, merge conflicts.
+- Orchestration: scheduler utilization, queue time, dependency-blocked time, duplicate leases.
+- CI: build-cache hit rate, selected-test false-negative rate, flaky failures, evidence re-use validity.
+- Review: reviewer cost and missed defects across risk classes.
+- Delivery: deployment frequency, change failure rate, MTTR, rollback success.
 
-每个实验结果带任务/Issue、Run、SHA、版本、配置、环境指纹、时间和数据出处，且区分作者报告与本仓库实测。尤其应报告尾延迟，不得仅报告平均值。
+Results must include workload, source SHA, agent/model configuration, environment fingerprint, date, units, and provenance. Always distinguish authors' measurements from our experiments.
