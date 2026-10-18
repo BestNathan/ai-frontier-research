@@ -1,0 +1,12 @@
+# Local credentials and ephemeral experiment data
+.env
+.env.*
+!.env.example
+.DS_Store
+__pycache__/
+*.pyc
+node_modules/
+.cache/
+.tmp/
+experiments/**/results/raw/
+experiments/**/results/private/
