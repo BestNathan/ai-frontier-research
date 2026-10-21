@@ -45,6 +45,7 @@ Start with the [research framework](docs/RESEARCH_FRAMEWORK.md), [methodology](d
 - [Open-source project catalog](projects/README.md)
 - [Reproducible experiments](experiments/README.md)
 - [Earlier article case studies](studies/2026-10/agentic-delivery-bottlenecks.md)
+- [Incremental CI and test impact analysis at agent scale](studies/2026-10/agent-scale-test-impact-analysis.md) — first-party September 14 case study, assessed October 21; reliability gaps and a falsifiable experiment
 
 **The research unit is the engineering concept**, not the company, model or blog post. Dated publication reviews are supporting evidence, not the repository taxonomy.
 
