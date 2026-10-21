@@ -12,6 +12,7 @@ As agents reduce implementation time, which physical, correctness and organizati
 ## Verified: cited implementation reports
 
 - [Scion](anthropic-scion.md) reports an internal response to SCM checkout and merge throughput limitations.
+- [Incremental CI test impact analysis](agent-scale-test-impact-analysis.md) reports Anthropic's response to result-ingestion lag and horizontal scaling of a history-based test selector; its operational metrics are author-reported.
 - [Managed Agents](anthropic-managed-agents.md) reports decoupling the session log and sandbox lifecycle.
 - [OpenAI Harness Engineering](openai-harness-engineering.md) reports increasing application/test legibility and executable architecture constraints.
 - [Symphony](openai-symphony.md) describes persistent issue-directed agent supervision.
