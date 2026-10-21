@@ -10,6 +10,7 @@ Observation snapshot: 2026-10-18.
 | --- | --- | --- |
 | [Engineering archive](https://www.anthropic.com/engineering) | ongoing | Infrastructure and agent engineering |
 | [Redesigning source control](https://www.anthropic.com/engineering/redesigning-source-control) | 2026-10-13 (updated 10-15) | Source control, CI, merge |
+| [Scaling test impact analysis at agent scale](https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic) — [research case note](../studies/2026-10/agent-scale-test-impact-analysis.md) | 2026-09-14 (observed 2026-10-21) | CI test selection, feedback freshness, horizontal ingestion, verification |
 | [Opt-in OSS vulnerability scanner](https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source) | 2026-10-08 | Security verification and human triage |
 | [Investigating unintended model actions](https://www.anthropic.com/research/investigating-unintended-model-actions) | 2026-10-09 | Tool safety, monitoring, sandbox |
 | [Agent self-replication research](https://www.anthropic.com/research/self-replicating-ai) | 2026-10-12 | Autonomous-agent threat models |
