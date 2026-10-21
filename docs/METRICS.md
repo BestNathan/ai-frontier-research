@@ -23,7 +23,7 @@ A generated pull request, a passing unit test, or a model response is *not* itse
 - Runtime: checkpoint integrity, retry duplicates, durable recovery P50/P95.
 - SCM: clone/checkout P50/P95, cache hit, I/O, workspace density, merge conflicts.
 - Orchestration: scheduler utilization, queue time, dependency-blocked time, duplicate leases.
-- CI: build-cache hit rate, selected-test false-negative rate, flaky failures, evidence re-use validity.
+- CI: build-cache hit rate, selected-test false-negative rate, flaky failures, evidence re-use validity, inbound-vs-applied result counts, test-history freshness P50/P95, oldest pending result age, selector fallback frequency, journal replay success and cost per verified delivery.
 - Review: reviewer cost and missed defects across risk classes.
 - Delivery: deployment frequency, change failure rate, MTTR, rollback success.
 
