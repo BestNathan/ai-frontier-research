@@ -41,6 +41,8 @@ Start with the [research framework](docs/RESEARCH_FRAMEWORK.md), [methodology](d
 - **[Latest monthly review: Anthropic and OpenAI (Sep 18–Oct 18, 2026)](observations/2026-09-18_to_2026-10-18.md)**
 - [Anthropic original-linked article notes and technical interpretation](observations/anthropic/2026-09-18_to_2026-10-18.md)
 - [OpenAI original-linked article notes and technical interpretation](observations/openai/2026-09-18_to_2026-10-18.md)
+- [Weekly Claude Resources engineering watch: source, workflow and review policy](docs/CLAUDE_RESOURCES_WATCH.md)
+- [First Claude Resources engineering evidence intake (Oct 22, 2026)](observations/anthropic/weekly/2026-10-22.md)
 - [Primary source registry](docs/SOURCE_REGISTRY.md)
 - [Open-source project catalog](projects/README.md)
 - [Reproducible experiments](experiments/README.md)
