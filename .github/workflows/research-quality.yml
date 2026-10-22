@@ -14,5 +14,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+      - name: Test source-watch parser and filtering
+        run: python3 -m unittest discover -s scripts -p 'test_claude_resources_watch.py'
       - name: Validate research files and internal links
         run: python3 scripts/check_research.py
