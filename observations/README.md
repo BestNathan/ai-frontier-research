@@ -10,6 +10,13 @@ Begin with the [infrastructure domain map](../domains/README.md). Use dated publ
 - [Anthropic: article inventory, technical mechanisms, gaps and priorities](anthropic/2026-09-18_to_2026-10-18.md)
 - [OpenAI: article inventory, technical mechanisms, gaps and priorities](openai/2026-09-18_to_2026-10-18.md)
 
+## Weekly first-party evidence intake
+
+- [Claude Resources engineering watch policy and schedule](../docs/CLAUDE_RESOURCES_WATCH.md)
+- [Initial curated engineering intake: 2026-10-22](anthropic/weekly/2026-10-22.md)
+
+Weekly intakes are review-required discovery notes, not replacements for domain-driven studies or fixed-window monthly reviews.
+
 ## How to use these snapshots
 
 1. Start with a technical constraint or invariant.
