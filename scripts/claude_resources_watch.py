@@ -16,7 +16,7 @@ SOURCES = ("https://claude.com/resources", "https://claude.com/resources/article
 HOSTS = {"claude.com", "www.claude.com", "claude.dev", "www.claude.dev",
          "anthropic.com", "www.anthropic.com"}
 MONTHS = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()
-DATE_RE = re.compile(r"\b(" + "|".join(MONTHS) + r")[a-z]*\s+\d{1,2},\s+20\d{2}", re.I)
+DATE_RE = re.compile(r"(" + "|".join(MONTHS) + r")[a-z]*\s+\d{1,2},\s+20\d{2}", re.I)
 RELEVANT = ("agent", "code review", "coding", "developer", "software", "engineering",
             "observab", "telemetr", "security", "vulnerabil", "source control",
             "version control", "repository", "repositories", "ci ", "test", "eval",
