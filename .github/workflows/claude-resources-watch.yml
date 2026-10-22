@@ -1,0 +1,62 @@
+name: Weekly Claude Resources Engineering Intake
+
+on:
+  schedule:
+    - cron: '17 10 * * 4'
+      timezone: 'Asia/Singapore'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: weekly-claude-resources-intake
+  cancel-in-progress: false
+
+jobs:
+  source-watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test source parsing and research safeguards
+        run: |
+          python3 -m unittest discover -s scripts -p 'test_claude_resources_watch.py'
+          python3 scripts/check_research.py
+      - name: Discover and summarize new first-party engineering resources
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_WATCH_MODEL: ${{ vars.CLAUDE_WATCH_MODEL || 'claude-sonnet-5-5' }}
+        run: python3 scripts/claude_resources_watch.py --lookback-days 35
+      - name: Validate generated research
+        run: python3 scripts/check_research.py
+      - name: Open a reviewable research intake PR, only if content changed
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: bot/weekly-claude-resources
+          delete-branch: true
+          add-paths: observations/anthropic/weekly/*.md
+          commit-message: 'research(anthropic): weekly Claude Resources evidence intake'
+          title: 'research(anthropic): weekly Claude Resources engineering intake'
+          body: |
+            Automated intake for #14, supporting the broader evidence task #10.
+
+            Source: https://claude.com/resources
+            Cadence: every Thursday, 10:17 Asia/Singapore.
+            Selection: first-party article cards, deduplicated against prior observation/study URLs.
+            Scope: agent coding infrastructure, CI, verification, runtime, review, security and observability.
+
+            ### Review requirements
+            - [ ] Read each original source, check publication date and classification.
+            - [ ] Do not treat vendor claims as independently reproduced facts.
+            - [ ] Check all optional model-generated mechanisms, implications, unknowns and tests.
+            - [ ] Confirm no duplicate articles or fabricated mechanisms.
+            - [ ] Promote durable findings to concept-based domains/studies separately.
+
+            The intake does not auto-merge. If no API key is configured, it still
+            creates a source-linked publisher-synopsis digest, labeled as preliminary.
