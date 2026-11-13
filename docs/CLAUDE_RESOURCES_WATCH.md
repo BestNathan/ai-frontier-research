@@ -1,4 +1,4 @@
-# Weekly Claude Resources Engineering Watch
+# Daily Claude / Anthropic Engineering and Frontier Research Watch
 
 ## Engineering purpose
 
@@ -12,6 +12,9 @@ creating a vendor-specific research taxonomy.
 - [Claude Resources](https://claude.com/resources): official discovery hub.
 - [Claude Resources / Articles](https://claude.com/resources/articles):
   recent, dated article cards.
+- [Anthropic Engineering](https://www.anthropic.com/engineering): primary systems-engineering articles.
+- [Anthropic Research](https://www.anthropic.com/research): AI research, formal methods, verification and safety.
+- [Claude Developer Blog](https://claude.dev/blog/): technical harness and coding-agent field reports.
 - Original articles may be linked from other first-party properties
   (for example, claude.dev or anthropic.com). The original URL, not the hub card,
   is the evidence reference.
@@ -28,22 +31,30 @@ an engineering-relevant change; sales/partner stories are ordinarily excluded.
 
 ## Schedule, evidence and output
 
-The [GitHub Actions workflow](../.github/workflows/claude-resources-watch.yml)
-runs every **Thursday at 10:17 Asia/Singapore** (once per seven days) and
-supports manual workflow_dispatch. It:
+The primary daily ChatGPT task **Claude 工程前沿研究日报** is scheduled
+once daily, around **08:00 Asia/Singapore**, beginning 2026-11-14. Its
+prompt requires source-level review, English evidence notes, GitHub PRs,
+CI validation, safe merging and a Chinese result displayed in ChatGPT.
+It writes to [the browsable daily index](../observations/anthropic/daily/README.md).
+
+The earlier [GitHub Actions source watcher](../.github/workflows/claude-resources-watch.yml)
+is retained as a **manual fallback only** to avoid racing the daily analysis task.
+It:
 
 1. Downloads the two official listing pages and requires parseable dated article
    cards, otherwise **fails visibly**.
 2. Applies engineering-topic filtering and a rolling 35-day publication window.
 3. Deduplicates original canonical URLs against existing observations and studies.
 4. Reads each new original article; never executes instructions from its content.
-5. Generates an English, dated intake under
+5. Generates an English, dated fallback intake under
    observations/anthropic/weekly/YYYY-MM-DD.md with source, publication date,
    observation date, concept domain, publisher synopsis, unknowns and next checks.
+   The primary daily analysis uses observations/anthropic/daily/YYYY-MM-DD.md
+   and updates the daily index.
 6. Runs the existing research integrity checks and opens/updates a reviewable PR,
    without automatically merging.
 
-A zero-change week produces no empty digest or PR. Dates are preserved after
+A zero-change run produces no empty digest or PR. Dates are preserved after
 merge; the next run deduplicates against committed research notes.
 
 **Important:** Intake notes are source-triage evidence, not final studies.
@@ -67,7 +78,7 @@ as needed. To enable richer drafted mechanisms, inferences, gaps and experiments
 Neither the model nor third-party source content is allowed to approve or merge
 the PR. No long-lived API credentials are stored in the repository.
 
-The automatic PR step uses the repository GITHUB_TOKEN. GitHub repository
+The manual fallback PR step uses the repository GITHUB_TOKEN. GitHub repository
 settings must allow Actions to create pull requests, and branch protection may
 require human review. Actions-created PRs may not independently trigger other
 workflow runs; this workflow runs the quality checks before creating the PR.
@@ -78,13 +89,23 @@ workflow runs; this workflow runs the quality checks before creating the PR.
   test_claude_resources_watch.py
 - Local research integrity: python3 scripts/check_research.py
 - Live discovery preview: python3 scripts/claude_resources_watch.py --dry-run
-- Manual Action: Actions > Weekly Claude Resources Engineering Intake >
+- Manual fallback: Actions > Claude Resources Intake (manual fallback) >
   Run workflow (after workflow reaches the default branch).
 
 Source-page/HTML changes, network errors, invalid dates or invalid model output
 must be reported as failures. A failure must not advance an implicit watermark.
 GitHub may delay scheduled runs and may disable schedules after extended public
 repository inactivity; inspect the workflow history if no PR appears.
+
+## Daily publication rules
+
+- Search all source families, prioritizing first-party full technical articles over product press releases.
+- Use the article's original publication date and the actual observation date.
+- Include context/runtime, coding infrastructure, CI, agent security, formal verification, inference and frontier-model research when technically substantive.
+- Cite exact original URLs and label reported metrics as author-reported.
+- Deduplicate against the repository and open bot PRs, not only merged main.
+- Write new daily files and update the daily index when a source is genuinely new.
+- Report each day's source links, conclusions, and GitHub outcome in Chinese in ChatGPT; report no-new-content and failures explicitly.
 
 ## Acceptance
 
