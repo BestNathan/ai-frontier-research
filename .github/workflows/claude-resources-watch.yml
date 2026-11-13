@@ -1,9 +1,6 @@
-name: Weekly Claude Resources Engineering Intake
+name: Claude Resources Intake (manual fallback)
 
 on:
-  schedule:
-    - cron: '17 10 * * 4'
-      timezone: 'Asia/Singapore'
   workflow_dispatch:
 
 permissions:
@@ -11,7 +8,7 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: weekly-claude-resources-intake
+  group: fallback-claude-resources-intake
   cancel-in-progress: false
 
 jobs:
@@ -47,7 +44,7 @@ jobs:
             Automated intake for #14, supporting the broader evidence task #10.
 
             Source: https://claude.com/resources
-            Cadence: every Thursday, 10:17 Asia/Singapore.
+            Cadence: manual fallback only (daily AI source analysis runs via a separate ChatGPT scheduled task).
             Selection: first-party article cards, deduplicated against prior observation/study URLs.
             Scope: agent coding infrastructure, CI, verification, runtime, review, security and observability.
 
