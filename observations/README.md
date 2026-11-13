@@ -10,12 +10,14 @@ Begin with the [infrastructure domain map](../domains/README.md). Use dated publ
 - [Anthropic: article inventory, technical mechanisms, gaps and priorities](anthropic/2026-09-18_to_2026-10-18.md)
 - [OpenAI: article inventory, technical mechanisms, gaps and priorities](openai/2026-09-18_to_2026-10-18.md)
 
-## Weekly first-party evidence intake
+## Daily frontier engineering evidence
 
-- [Claude Resources engineering watch policy and schedule](../docs/CLAUDE_RESOURCES_WATCH.md)
-- [Initial curated engineering intake: 2026-10-22](anthropic/weekly/2026-10-22.md)
+- **[Browsable Anthropic / Claude daily research index](anthropic/daily/README.md)**
+- [Latest curated technical synthesis: 2026-11-13](anthropic/daily/2026-11-13.md)
+- [Daily discovery, repository update, and review policy](../docs/CLAUDE_RESOURCES_WATCH.md)
+- [Earlier first-party intake: 2026-10-22](anthropic/weekly/2026-10-22.md)
 
-Weekly intakes are review-required discovery notes, not replacements for domain-driven studies or fixed-window monthly reviews.
+Dated intakes preserve original publication links, engineering problems, mechanisms, trade-offs and falsifiable next steps. New items are indexed only after source checking; monthly snapshots are not overwritten.
 
 ## How to use these snapshots
 
