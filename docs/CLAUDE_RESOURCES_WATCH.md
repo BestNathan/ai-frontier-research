@@ -31,7 +31,7 @@ an engineering-relevant change; sales/partner stories are ordinarily excluded.
 
 ## Schedule, evidence and output
 
-The primary daily ChatGPT task **Claude 工程前沿研究日报** is scheduled
+The primary daily ChatGPT task **Claude Engineering Frontier Daily** is scheduled
 once daily, around **08:00 Asia/Singapore**, beginning 2026-11-14. Its
 prompt requires source-level review, English evidence notes, GitHub PRs,
 CI validation, safe merging and a Chinese result displayed in ChatGPT.
