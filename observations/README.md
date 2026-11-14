@@ -13,7 +13,8 @@ Begin with the [infrastructure domain map](../domains/README.md). Use dated publ
 ## Daily frontier engineering evidence
 
 - **[Browsable Anthropic / Claude daily research index](anthropic/daily/README.md)**
-- [Latest curated technical synthesis: 2026-11-13](anthropic/daily/2026-11-13.md)
+- **[Latest curated technical synthesis: 2026-11-14](anthropic/daily/2026-11-14.md)**
+- [Previous technical synthesis: 2026-11-13](anthropic/daily/2026-11-13.md)
 - [Daily discovery, repository update, and review policy](../docs/CLAUDE_RESOURCES_WATCH.md)
 - [Earlier first-party intake: 2026-10-22](anthropic/weekly/2026-10-22.md)
 
