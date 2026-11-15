@@ -9,6 +9,7 @@ rather than vendor-specific news.
 
 | Observation date | Publication coverage | Topics | Research |
 | --- | --- | --- | --- |
+| 2026-11-15 | 2026-06-02–2026-11-06 (curated backfill) | Risk-weighted code review and review convergence; dynamic task-specific harnesses; uncertainty-aware scientific model search | [Three technical analyses with experiments](2026-11-15.md) |
 | 2026-11-14 | 2026-10-08–2026-11-13 | Always-on event inbox/outbox; safety eval design; binary formal verification; subagent consolidation; reliable automations | [Five new technical analyses and verification plans](2026-11-14.md) |
 | 2026-11-13 | 2026-11-02–2026-11-12 | Agent memory; Message threads; 1,000-agent isolation and coordination; self-hosted Managed Agents; zkML proof of inference | [Five evidence-backed technical analyses](2026-11-13.md) |
 
