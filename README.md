@@ -42,6 +42,8 @@ Start with the [research framework](docs/RESEARCH_FRAMEWORK.md), [methodology](d
 - [Anthropic original-linked article notes and technical interpretation](observations/anthropic/2026-09-18_to_2026-10-18.md)
 - [OpenAI original-linked article notes and technical interpretation](observations/openai/2026-09-18_to_2026-10-18.md)
 - **[Latest Claude / Anthropic frontier engineering research — daily index](observations/anthropic/daily/README.md)**
+- **[November 17: protected, revision-bound verification and review evidence](observations/anthropic/daily/2026-11-17.md)**
+- [November 16: capability-adaptive tools and measurable performance](observations/anthropic/daily/2026-11-16.md)
 - [November 15: code review, dynamic harnesses and scientific-model uncertainty](observations/anthropic/daily/2026-11-15.md)
 - [Daily research collection and review procedure](docs/CLAUDE_RESOURCES_WATCH.md)
 - **[Latest Claude / Anthropic engineering synthesis (Nov 14, 2026)](observations/anthropic/daily/2026-11-14.md)**
