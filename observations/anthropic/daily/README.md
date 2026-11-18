@@ -9,6 +9,7 @@ rather than vendor-specific news.
 
 | Observation date | Publication coverage | Topics | Research |
 | --- | --- | --- | --- |
+| 2026-11-18 | 2026-02-05 and 2026-05-25 (curated backfill; no new Nov 17–18 technical publication verified) | Resource ceilings as agent-eval confounders; sandbox, proxy, credentials and MCP capability boundaries | [Two infrastructure analyses and falsifiable experiments](2026-11-18.md) |
 | 2026-11-17 | 2026-11-16 (new technical article) | Commit-bound verification evidence, protected review policies, E2E/property/differential tests, diff-triggered reliability checks | [Verification evidence and falsifiable experiment](2026-11-17.md) |
 | 2026-11-16 | 2026-04-10 and 2026-09-23 (curated backfill) | Model-adaptive tool interfaces, progressive disclosure and agent clarification; measured performance optimization, lab-to-field calibration and CI ratchets | [Two technical analyses and falsifiable experiments](2026-11-16.md) |
 | 2026-11-15 | 2026-06-02–2026-11-06 (curated backfill) | Risk-weighted code review and review convergence; dynamic task-specific harnesses; uncertainty-aware scientific model search | [Three technical analyses with experiments](2026-11-15.md) |
