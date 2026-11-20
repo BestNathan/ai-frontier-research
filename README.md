@@ -42,7 +42,8 @@ Start with the [research framework](docs/RESEARCH_FRAMEWORK.md), [methodology](d
 - [Anthropic original-linked article notes and technical interpretation](observations/anthropic/2026-09-18_to_2026-10-18.md)
 - [OpenAI original-linked article notes and technical interpretation](observations/openai/2026-09-18_to_2026-10-18.md)
 - **[Latest Claude / Anthropic frontier engineering research — daily index](observations/anthropic/daily/README.md)**
-- **[November 19: observable chaos loops and evidence-bound agent remediation](observations/anthropic/daily/2026-11-19.md)**
+- **[November 20: protected agent eval hillclimbing and ephemeral cloud-session boundaries](observations/anthropic/daily/2026-11-20.md)**
+- [November 19: observable chaos loops and evidence-bound agent remediation](observations/anthropic/daily/2026-11-19.md)
 - [November 18: agent-eval resource confounders and capability containment](observations/anthropic/daily/2026-11-18.md)
 - [November 17: protected, revision-bound verification and review evidence](observations/anthropic/daily/2026-11-17.md)
 - [November 16: capability-adaptive tools and measurable performance](observations/anthropic/daily/2026-11-16.md)
