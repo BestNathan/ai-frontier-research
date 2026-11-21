@@ -9,6 +9,7 @@ rather than vendor-specific news.
 
 | Observation date | Publication coverage | Topics | Research |
 | --- | --- | --- | --- |
+| 2026-11-21 | 2026-11-17 Anthropic article and 2026-11-07 primary manuscripts (curated backfill; no Nov 20–21 new technical publication verified) | Scientific hypothesis DAGs, independent derivations, Lean evidence, numerical checks and artifact provenance | [Scientific verification methods and falsifiable experiments](2026-11-21.md) |
 | 2026-11-20 | 2026-09-28 and 2026-10-06 (technical backfill; no newly published Nov 18–20 article verified) | Protected evaluation oracles and held-out hillclimbing; ephemeral cloud sessions, external GitHub credentials, VM reclamation and restart recovery | [Two engineering analyses and falsifiable experiments](2026-11-20.md) |
 | 2026-11-19 | 2026-11-17 (newly curated engineering article) | Telemetry-driven agent chaos loop; fault injection, durable writes, review gates, resource attribution and reproducible experiments | [Reliability controller and evidence-bound remediation analysis](2026-11-19.md) |
 | 2026-11-18 | 2026-02-05 and 2026-05-25 (curated backfill; no new Nov 17–18 technical publication verified) | Resource ceilings as agent-eval confounders; sandbox, proxy, credentials and MCP capability boundaries | [Two infrastructure analyses and falsifiable experiments](2026-11-18.md) |
