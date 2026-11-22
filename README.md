@@ -42,7 +42,8 @@ Start with the [research framework](docs/RESEARCH_FRAMEWORK.md), [methodology](d
 - [Anthropic original-linked article notes and technical interpretation](observations/anthropic/2026-09-18_to_2026-10-18.md)
 - [OpenAI original-linked article notes and technical interpretation](observations/openai/2026-09-18_to_2026-10-18.md)
 - **[Latest Claude / Anthropic frontier engineering research — daily index](observations/anthropic/daily/README.md)**
-- **[November 21: scientific-agent hypothesis DAGs, independent derivations and formal evidence](observations/anthropic/daily/2026-11-21.md)**
+- **[November 22: model-conditional harness ablation, independent QA and recovery costs](observations/anthropic/daily/2026-11-22.md)**
+- [November 21: scientific-agent hypothesis DAGs, independent derivations and formal evidence](observations/anthropic/daily/2026-11-21.md)
 - [November 20: protected agent eval hillclimbing and ephemeral cloud-session boundaries](observations/anthropic/daily/2026-11-20.md)
 - [November 19: observable chaos loops and evidence-bound agent remediation](observations/anthropic/daily/2026-11-19.md)
 - [November 18: agent-eval resource confounders and capability containment](observations/anthropic/daily/2026-11-18.md)
